@@ -1,0 +1,91 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    height: 100%;
+    background-size: cover;
+    background-position: center center;
+    display: block;
+    background-image: url('imageArrierePlan.jpg'); 
+    justify-items: center;
+    align-items: center;
+}
+header {
+    width: 100%;
+    height: 10%;
+    text-align: center;
+    padding: 20px;
+    background-color: #d9d9d9;
+}
+
+
+.header h1 {
+    width: 1440px;
+    height: 165px;
+    margin: 0;
+    display: block;
+    color: #d9d9d900;
+}
+
+
+#imageDeFond {
+    width: 100%;
+    height: 100%;
+    margin:0%;
+    background-color: #d9d9d9;
+    display: grid; 
+    justify-content: auto; 
+    align-items: auto; 
+    background-size: cover; 
+    background-position: center center; 
+    background-repeat: no-repeat;
+    grid-template-columns: 2;
+    grid-template-rows:1 ;
+
+}
+
+#contenu{
+
+    width: 1272px;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: auto;
+    height: 716px;
+    background-color: #d9d9d9; 
+    border: 7px solid #009d52;
+    display:block;
+    background-size: cover; 
+    background-position: center center; 
+    background-repeat: no-repeat;
+}
+#formEquipe{
+    width: 75%;
+    height: 250px;
+    margin: 10px;
+    background-color: #ffffffa4;
+    display: block;
+    grid-column: 1;
+    align-items: center;
+    
+}
+button{
+    width: auto;
+    height: auto;
+    background-color: #7fb69b;
+    display: block;
+    align-items: center;
+    justify-items: center;
+    border-radius: 8px;
+    margin-top: 8px;
+    
+}
+#recapEquipe{
+    width: 75%;
+    height: auto;
+    background-color: #ffffffa4;
+    margin: 10px;
+    display:block;
+    grid-column: 2;
+}
