@@ -39,7 +39,6 @@ public class CalculateurSimple {
                 System.out.println("Opération non valide !");
                 return;
         }
-
         System.out.printf("Résultat: %.2f\n", resultat);
     }
 }
