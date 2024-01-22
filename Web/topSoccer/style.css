@@ -89,3 +89,112 @@ button{
     display:block;
     grid-column: 2;
 }
+#recapAvis {
+
+    width: 25%;
+    height: 100px;
+    margin: 10px;
+    background-color: #ffffffa4;
+    display: block;
+}
+
+#modifAvis {
+
+    width: 75%;
+    height: 100px;
+    margin: 10px;
+    background-color: #ffffffa4;
+    display: block;
+}
+
+#derAvis {
+
+    width: 25%;
+    height: 100px;
+    margin: 10px;
+    background-color: #ffffffa4;
+    display: block;
+}
+
+#avisRec {
+
+    width: 25%;
+    height: 100px;
+    margin: 10px;
+    background-color: #ffffffa4;
+    display: block;
+
+    top: 317px;
+    left: 1px;
+}
+
+.depAvis {
+    width: 25%;
+    height: 100px;
+    margin: 10px;
+    padding: 10%;
+    background-color: #ffffffa4;
+    display: block;
+
+}
+
+
+#validAvis {
+    width: 25%;
+    height: 100px;
+    margin: 10px;
+    background-color: #ffffffa4;
+    display: block;
+
+}
+img {
+    width: 80px;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+}
+#noteAvis {
+    width: 37%;
+    height: 100px;
+    margin: 10px;
+    background-color: #ffffffa4;
+    display: block;
+    margin-left: 440px;
+    margin-top: -350px;
+}
+p {
+    font-size: 20px; 
+    margin-left: 200px;
+}
+#dep{
+    width: 182px;
+    height: 50px;
+    background-color: #ffffffa4;
+    margin: 10px;
+    display: block;
+    margin-left: 1000px;
+    margin-bottom: 325px;
+    margin-top: -650px;
+}
+#modif{
+    width: 182px;
+    height: 50px;
+    background-color: #ffffffa4;
+    margin: 10px;
+    display: block;
+    margin-left: 1000px;
+    margin-bottom: 325px;
+    margin-top: -150px;
+
+}
+#valid{
+    width: 182px;
+    height: 50px;
+    background-color: #ffffffa4;
+    margin: 10px;
+    display: block;
+    margin-left: 1000px;
+    margin-bottom: 325px;
+    margin-top: -100px;
+}
