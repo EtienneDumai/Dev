@@ -16,6 +16,7 @@ int main()
     initialiserLaPartie();
     jouerLaPartie();
     finaliserLaPartie();
+    
     return 0;
 }
 
