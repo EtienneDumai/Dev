@@ -118,7 +118,7 @@ void tirerUnSigne(int signe1, int signe2, bool &gagnant1, bool &gagnant2, bool &
     }
 }
 
-string definirGagnant(bool gagnant1, bool gagnant2)
+void definirGagnant(bool gagnant1, bool gagnant2)
 {
     string gagnant;
     if (gagnant1 == true)
