@@ -24,13 +24,13 @@ int signeJ1;
 int signeJ2;
 void choisirPseudo(string &pseudo1, string &pseudo2);
 void tirerUnSigne(int signe1, int signe2, bool &gagnant1, bool &gagnant2, bool &egaliteJeu);
-string definirGagnant(bool gagnant1, bool gagnant2);
+void definirGagnant(bool gagnant1, bool gagnant2, string &gagnantFinal);
 void afficherGagnant();
-int main(void)
+int main()
 {
     choisirPseudo(pseudoJ1, pseudoJ2);
     tirerUnSigne(signeJ1, signeJ2, gagnantJ1, gagnantJ2, egalite);
-    gagnantPartie = definirGagnant(gagnantJ1, gagnantJ2);
+    definirGagnant(gagnantJ1, gagnantJ2, gagnantPartie);
     afficherGagnant();
 }
 
@@ -61,55 +61,52 @@ void choisirPseudo(string &pseudo1, string &pseudo2)
 void tirerUnSigne(int signe1, int signe2, bool &gagnant1, bool &gagnant2, bool &egaliteJeu)
 {
 
-    while (!egaliteJeu)
+    while (egaliteJeu != false)
     {
         signe1 = random(0, 2);
         signe2 = random(0, 2);
         switch (signe1)
         {
         case PAPIER:
-            switch (signe2)
+            if (signe2 == PAPIER)
             {
-            case PAPIER:
                 egaliteJeu = true;
-                break;
-            case PIERRE:
+            }
+            else if (signe2 == PIERRE)
+            {
                 gagnant1 = true;
-                break;
-            case CISEAUX:
+            }
+            else
+            {
                 gagnant2 = true;
-            default:
-                break;
             }
             break;
         case PIERRE:
-            switch (signe2)
+            if (signe2 == PAPIER)
             {
-            case PAPIER:
-                gagnant2 = true;
-                break;
-            case PIERRE:
-                egaliteJeu = true;
-                break;
-            case CISEAUX:
                 gagnant1 = true;
-            default:
-                break;
+            }
+            else if (signe2 == PIERRE)
+            {
+                egaliteJeu = true;
+            }
+            else
+            {
+                gagnant2 = true;
             }
             break;
         case CISEAUX:
-            switch (signe2)
+            if (signe2 == PAPIER)
             {
-            case PAPIER:
                 gagnant1 = true;
-                break;
-            case PIERRE:
+            }
+            else if (signe2 == PIERRE)
+            {
                 gagnant2 = true;
-                break;
-            case CISEAUX:
-                egaliteJeu = true;
-            default:
-                break;
+            }
+            else
+            {
+                egaliteJeu=true;
             }
             break;
         default:
@@ -118,18 +115,20 @@ void tirerUnSigne(int signe1, int signe2, bool &gagnant1, bool &gagnant2, bool &
     }
 }
 
+<<<<<<< HEAD
 void definirGagnant(bool gagnant1, bool gagnant2)
+=======
+void definirGagnant(bool gagnant1, bool gagnant2, string &gagnantFinal)
+>>>>>>> a903f0450425092bf2f6f4836791545d32364cad
 {
-    string gagnant;
     if (gagnant1 == true)
     {
-        gagnant = pseudoJ1;
+        gagnantFinal = pseudoJ1;
     }
     if (gagnant2 == true)
     {
-        gagnant = pseudoJ2;
+        gagnantFinal = pseudoJ2;
     }
-    return gagnant;
 }
 
 void afficherGagnant()
