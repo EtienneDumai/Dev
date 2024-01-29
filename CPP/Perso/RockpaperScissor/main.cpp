@@ -63,6 +63,7 @@ void tirerUnSigne(int signe1, int signe2, bool &gagnant1, bool &gagnant2, bool &
 
     while (egaliteJeu != false)
     {
+        egaliteJeu = false;
         signe1 = random(0, 2);
         signe2 = random(0, 2);
         switch (signe1)
@@ -72,11 +73,11 @@ void tirerUnSigne(int signe1, int signe2, bool &gagnant1, bool &gagnant2, bool &
             {
                 egaliteJeu = true;
             }
-            else if (signe2 == PIERRE)
+            if (signe2 == PIERRE)
             {
                 gagnant1 = true;
             }
-            else
+            if (signe2 == CISEAUX)
             {
                 gagnant2 = true;
             }
@@ -86,11 +87,11 @@ void tirerUnSigne(int signe1, int signe2, bool &gagnant1, bool &gagnant2, bool &
             {
                 gagnant1 = true;
             }
-            else if (signe2 == PIERRE)
+            if (signe2 == PIERRE)
             {
                 egaliteJeu = true;
             }
-            else
+            if (signe2 == CISEAUX)
             {
                 gagnant2 = true;
             }
@@ -100,13 +101,13 @@ void tirerUnSigne(int signe1, int signe2, bool &gagnant1, bool &gagnant2, bool &
             {
                 gagnant1 = true;
             }
-            else if (signe2 == PIERRE)
+            if (signe2 == PIERRE)
             {
                 gagnant2 = true;
             }
-            else
+            if (signe2 == CISEAUX)
             {
-                egaliteJeu=true;
+                egaliteJeu = true;
             }
             break;
         default:
@@ -115,11 +116,8 @@ void tirerUnSigne(int signe1, int signe2, bool &gagnant1, bool &gagnant2, bool &
     }
 }
 
-<<<<<<< HEAD
-void definirGagnant(bool gagnant1, bool gagnant2)
-=======
 void definirGagnant(bool gagnant1, bool gagnant2, string &gagnantFinal)
->>>>>>> a903f0450425092bf2f6f4836791545d32364cad
+
 {
     if (gagnant1 == true)
     {
