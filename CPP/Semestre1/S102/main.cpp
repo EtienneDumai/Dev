@@ -9,8 +9,6 @@
 #include "game-tools.h"
 #include "bataille-navale.h"
 using namespace std;
-
-
 int main()
 {
     initialiserLaPartie();
