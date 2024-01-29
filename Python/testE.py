@@ -139,8 +139,6 @@ def Exe_jeu():
                     for i in range(len(tg1)):
                         joueur2.append(tg1[i])
                         joueur2.append(tg2[i])
-                
-                #Cb_reste_il_de_cartes()
 
         elif tg1[len(tg1)-1][0] > tg2[len(tg2)-1][0]:  # joueur gagnant 1
             joueur1.append(tg2[0])
@@ -152,8 +150,6 @@ def Exe_jeu():
             joueur2.append(tg2[0])
             print("Gagnant joueur2.")
 
-        #print("joueur2 : ",joueur2)
-        #print("joueur1 : ",joueur1)
         del tg1[:]
         del tg2[:]
 
