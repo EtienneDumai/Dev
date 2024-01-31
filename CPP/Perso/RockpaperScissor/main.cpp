@@ -8,6 +8,7 @@
 #include <iostream>
 #include "game-tools.h"
 
+
 enum Signe
 {
     PAPIER = 0,
