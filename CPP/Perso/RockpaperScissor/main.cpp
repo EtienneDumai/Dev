@@ -7,12 +7,19 @@
 
 #include <iostream>
 #include "game-tools.h"
+/*---------------------------------------
+-----Déclaration des types complexes-----
+---------------------------------------*/
 enum Signe
 {
     PAPIER = 0,
     PIERRE = 1,
     CISEAUX = 2
 };
+
+/*---------------------------------------
+--------Déclaration des variables--------
+---------------------------------------*/
 bool gagnantJ1 = false;
 bool gagnantJ2 = false;
 bool egalite = false;
@@ -21,11 +28,18 @@ string pseudoJ1;
 string pseudoJ2;
 int signeJ1;
 int signeJ2;
+
+/*---------------------------------------
+-----Déclaration des sous-programmes-----
+---------------------------------------*/
 void choisirPseudo(string &pseudo1, string &pseudo2);
 void tirerUnSigne(int signe1, int signe2, bool &gagnant1, bool &gagnant2, bool &egaliteJeu);
 void definirGagnant(bool gagnant1, bool gagnant2, string &gagnantFinal);
 void afficherGagnant();
 
+/*---------------------------------------
+-----------Corps du programme-----------
+---------------------------------------*/
 int main()
 {
     choisirPseudo(pseudoJ1, pseudoJ2);
@@ -34,6 +48,9 @@ int main()
     afficherGagnant();
 }
 
+/*---------------------------------------
+--------Corps des sous-programmes--------
+---------------------------------------*/
 void choisirPseudo(string &pseudo1, string &pseudo2)
 {
     bool pseudoDiff = false;
