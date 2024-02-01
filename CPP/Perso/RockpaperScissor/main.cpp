@@ -25,6 +25,7 @@ void choisirPseudo(string &pseudo1, string &pseudo2);
 void tirerUnSigne(int signe1, int signe2, bool &gagnant1, bool &gagnant2, bool &egaliteJeu);
 void definirGagnant(bool gagnant1, bool gagnant2, string &gagnantFinal);
 void afficherGagnant();
+
 int main()
 {
     choisirPseudo(pseudoJ1, pseudoJ2);
@@ -59,9 +60,10 @@ void choisirPseudo(string &pseudo1, string &pseudo2)
 
 void tirerUnSigne(int signe1, int signe2, bool &gagnant1, bool &gagnant2, bool &egaliteJeu)
 {
-
-    while (egaliteJeu != false)
+    while (true)
     {
+        gagnant1 = false;
+        gagnant2 = false;
         egaliteJeu = false;
         signe1 = random(0, 2);
         signe2 = random(0, 2);
@@ -72,11 +74,11 @@ void tirerUnSigne(int signe1, int signe2, bool &gagnant1, bool &gagnant2, bool &
             {
                 egaliteJeu = true;
             }
-            if (signe2 == PIERRE)
+            else if (signe2 == PIERRE)
             {
                 gagnant1 = true;
             }
-            if (signe2 == CISEAUX)
+            else if (signe2 == CISEAUX)
             {
                 gagnant2 = true;
             }
@@ -86,11 +88,11 @@ void tirerUnSigne(int signe1, int signe2, bool &gagnant1, bool &gagnant2, bool &
             {
                 gagnant1 = true;
             }
-            if (signe2 == PIERRE)
+            else if (signe2 == PIERRE)
             {
                 egaliteJeu = true;
             }
-            if (signe2 == CISEAUX)
+            else if (signe2 == CISEAUX)
             {
                 gagnant2 = true;
             }
@@ -100,11 +102,11 @@ void tirerUnSigne(int signe1, int signe2, bool &gagnant1, bool &gagnant2, bool &
             {
                 gagnant1 = true;
             }
-            if (signe2 == PIERRE)
+            else if (signe2 == PIERRE)
             {
                 gagnant2 = true;
             }
-            if (signe2 == CISEAUX)
+            else if (signe2 == CISEAUX)
             {
                 egaliteJeu = true;
             }
@@ -112,11 +114,14 @@ void tirerUnSigne(int signe1, int signe2, bool &gagnant1, bool &gagnant2, bool &
         default:
             break;
         }
+        if (gagnant1 == true || gagnant2 == true)
+        {
+            break;
+        }
     }
 }
 
 void definirGagnant(bool gagnant1, bool gagnant2, string &gagnantFinal)
-
 {
     if (gagnant1 == true)
     {
@@ -125,6 +130,10 @@ void definirGagnant(bool gagnant1, bool gagnant2, string &gagnantFinal)
     if (gagnant2 == true)
     {
         gagnantFinal = pseudoJ2;
+    }
+    else
+    {
+        tirerUnSigne(signeJ1, signeJ2, gagnantJ1, gagnantJ2, egalite);
     }
 }
 
