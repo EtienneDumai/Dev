@@ -1,6 +1,6 @@
 import random
 
-joueur1 = []  # joueur1 du jeux
+joueur1 = []  
 joueur2 = []
 jdc1 = []
 
@@ -13,7 +13,6 @@ jdc1 = []
 def Cb_reste_il_de_cartes():
 
     if(len(joueur1)+len(joueur2) != len(jdc1)):
-        #print("Nombre de cartes restantes : ",  len(joueur1)+len(joueur2)+len(tg1)+len(tg2))
         print("Nombre de cartes restantes : ",  len(joueur1)+len(joueur2))
         print("Oups")
 
@@ -41,7 +40,6 @@ def Création_du_jeux(nbcartes):
             _jdc1.append((i, 'pique'))  # definition cartes de pique
             _jdc1.append((i, 'trefle'))  # definition cartes de trèfles
             _jdc1.append((i, 'carreau'))  # definition cartes de carreau
-            # print(jdc1[i-7])
     
     elif nbcartes==54:  
         for i in range(1, 15):  # definition jeux de 32 cartes

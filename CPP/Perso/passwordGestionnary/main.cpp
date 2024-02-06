@@ -131,6 +131,7 @@ void modificationDuFichier(UnFichierTexte &fic, UnModeOuverture modeOuvertureDuF
     cout << "INIT : " << __LINE__ << endl;
 #endif
     bool enregistre = false;
+    string ligne;
     string reponsePlateforme;
     string identifiant;
     string password;
