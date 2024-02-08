@@ -28,6 +28,10 @@ void encrypterLeMessage(string &message)
     nbrDeCryptage = random(1,26);
     for (int i = 0; message[i] != '\0'; i++)
     {
+        if (int(i)<97 && int(i)>122)
+        {
+            cout<<"veuillez entrer un message en lettres miniscules"<<endl;
+        }
         memTemp = int(i)+nbrDeCryptage;
         memTempString=char(memTemp);
         messageCode+= memTempString;
