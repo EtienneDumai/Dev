@@ -36,5 +36,5 @@ void encrypterLeMessage(string &message)
         memTempString=char(memTemp);
         messageCode+= memTempString;
     }
-    cout<<"Voici le message encrypte"<<messageCode<<endl;
+    cout<<u8"Voici le message encrypte"<<messageCode<<endl;
 }

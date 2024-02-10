@@ -3,3 +3,8 @@
 using namespace std;
 const int NB_CASES=3;
 char tableauDeJeu[NB_CASES];
+
+int main()
+{
+    return 0;
+}

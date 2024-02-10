@@ -104,7 +104,6 @@ def Exe_jeu():
                     del tg1[:] 
                     print("fin de partie j1 est à sec.")   
                     break    
-                    #del joueur1
                     
                 elif len(joueur2) < 3:
                     for cartes_restantes in joueur2:
