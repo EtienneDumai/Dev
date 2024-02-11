@@ -1,40 +1,40 @@
 #include <iostream>
 #include "game-tools.h"
+#include <locale>
 using namespace std;
 
-string messageACrypter;
+wstring messageACrypter;
 
-void demanderMessage(string &message);
-void encrypterLeMessage(string& message);
+void demanderMessage(wstring &message);
+void encrypterLeMessage(wstring& message);
 int main()
 {
+    setlocale(LC_ALL, "");
     demanderMessage(messageACrypter);
     encrypterLeMessage(messageACrypter);
     return 0;
 }
 
-void demanderMessage(string &message)
+void demanderMessage(wstring &message)
 {
-    cout << "Quel est lemessage que vous voulez encrypter via le systeme de la roue de Cesar";
-    cin >> message;
+    wcout << "Quel est le message que vous voulez encrypter via le systeme de la roue de Cesar"<<endl;
+    wcin >> message;
 }
 
-void encrypterLeMessage(string &message)
+void encrypterLeMessage(wstring &message)
 {
+    setlocale(LC_ALL, "");
     int memTemp;
-    string memTempString;
-    string messageCode;
+    wstring memTempString;
+    wstring messageCode;
     int nbrDeCryptage;
     nbrDeCryptage = random(1,26);
     for (int i = 0; message[i] != '\0'; i++)
     {
-        if (int(i)<97 && int(i)>122)
-        {
-            cout<<"veuillez entrer un message en lettres miniscules"<<endl;
-        }
-        memTemp = int(i)+nbrDeCryptage;
-        memTempString=char(memTemp);
+        memTemp = int(message[i])+nbrDeCryptage;
+        memTempString=wchar_t(memTemp);
         messageCode+= memTempString;
     }
-    cout<<u8"Voici le message encrypte"<<messageCode<<endl;
+    wcout<<"Voici le message encrypte"<<endl;
+    wcout<<messageCode;
 }
