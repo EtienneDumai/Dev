@@ -54,14 +54,26 @@ void Bouton::definirCouleur(Couleur uneCouleur)
 }
 
 void Bouton::afficher(Fenetre &f) const
-{
+{*
+    (*this).m_cercle.afficher(f);
+    if ((*this).actif())
+    {
+        f.choixCouleurTrace((*this).couleur());
+        int r = (*this).rayon();
+        int x = (*this).coordX()-r/2;
+        int y = (*this).coordY()-r/2;
+        f.remplitEllispe(x,y,r,r);
+    }
+    
 }
 
 void Bouton::effacer(Fenetre &f) const
 {
+    (*this).m_cercle.effacer(f);
+    (*this).dessinerEtat(f, f.couleurFond());
 }
 
 bool Bouton::touche(int x, int y) const
 {
-    return false;
+    return (*this).m_cercle.touche(x,y);
 }

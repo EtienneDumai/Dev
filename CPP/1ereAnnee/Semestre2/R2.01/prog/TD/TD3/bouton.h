@@ -3,6 +3,7 @@
 class Bouton
 {
 private:
+    void dessinerEtat(Fenetre &, Couleur)const;
     Cercle m_cercle;
     bool m_estActif;
 
