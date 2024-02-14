@@ -18,8 +18,8 @@ int main()
     { cout << s << endl ; }
   catch (char c)
     { cout << c << endl ; }
- // catch (int e)
-  //  { cout << "err !" << e << '!' << endl ; }
+ catch (int e)
+    { cout << "err !" << e << '!' << endl ; }
   catch (float)
     { cout << "probleme avec un reel !" << endl ; }
   catch (...)
