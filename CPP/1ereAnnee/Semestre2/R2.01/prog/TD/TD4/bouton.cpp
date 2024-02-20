@@ -1,4 +1,4 @@
-#include "bouton.h"
+#include "Bouton.h"
 
 void Bouton::definir(int x, int y, int rayon, int r, int v, int b, bool estActif)
 {
