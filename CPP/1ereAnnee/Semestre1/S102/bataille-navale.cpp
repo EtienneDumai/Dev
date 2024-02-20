@@ -23,8 +23,8 @@ Bateau bateaux[NB_BATEAUX]; // tableau de Bateaux
 
 bool abandonJ1;
 bool abandonJ2;
-string msgErreurCo = "Veuillez entre une lettre entre A et I (en majuscule) et un chifre entre 1 et 9"; 
-//message d'erreur pour etre affiché en couleur
+string msgErreurCo = "Veuillez entre une lettre entre A et I (en majuscule) et un chifre entre 1 et 9";
+// message d'erreur pour etre affiché en couleur
 
 void afficherBateau()
 {
@@ -130,7 +130,7 @@ bool verifCroisBateau(Bateau Bateaux[NB_BATEAUX])
     }
     return aucunCroisement;
 }
-//verification du croisement des bateaux si ils ont une case en commun
+// verification du croisement des bateaux si ils ont une case en commun
 bool verifierCroisementBateaux(Bateau Bateaux[NB_BATEAUX])
 {
 
