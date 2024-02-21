@@ -52,6 +52,14 @@ void sousProg()
    cin >> x;
    cout << "   Valeur pour diviseur : ";
    cin >> diviseur;
+   try
+   {
+      cout << division(x, diviseur);
+   }
+   catch (string)
+   {
+      cerr << "division par 0 " << '\n';
+   }
 
    // x, diviseur >> calcul et affichage division >> (écran)
    cout << "   " << x << " / " << diviseur << " = ";
