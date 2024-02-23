@@ -1,5 +1,20 @@
 #include "Bouton.h"
 
+//constructeur par défaut
+Bouton::Bouton():
+    m_cercle(),
+    m_estActif(false){
+}
+//constructeur permettant de créer à partir d'un cercle et d'un etat
+Bouton::Bouton(const Cercle &unCercle, bool estActif):
+    m_cercle(unCercle),
+    m_estActif(estActif){
+}
+//constructeur de copie
+Bouton::Bouton(const Bouton &unBouton):
+    m_cercle(unBouton.m_cercle),
+    m_estActif(unBouton.m_estActif){
+}
 void Bouton::definir(int x, int y, int rayon, int r, int v, int b, bool estActif)
 {
     (*this).m_cercle.placer(x, y);
