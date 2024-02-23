@@ -59,6 +59,7 @@ void sousProg()
    catch (string)
    {
       cerr << "division par 0 " << '\n';
+      throw string("Division par zéro detectee fin du sous prog");
    }
 
    // x, diviseur >> calcul et affichage division >> (écran)
