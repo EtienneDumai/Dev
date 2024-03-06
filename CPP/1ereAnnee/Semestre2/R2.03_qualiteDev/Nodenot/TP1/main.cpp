@@ -26,24 +26,18 @@ int main()
 }
   string Substring(const string chaine, int Deb, int Longueur)
     {
-
         string chaineCoupe="";
-        for (int i = Deb; i <= Deb+Longueur ; i++)
+        if (Deb<0)
         {
-            /* code */
+            throw string("Deb ne peut pas etre negatif");
         }
         
-        try
+        for (int i = Deb; i <= Deb+Longueur ; i++)
         {
-            if (Deb < 0)
-            {
-                throw string("Exception : Deb ne peut pas etre negatif");
-            }
+            chaineCoupe+= chaineCoupe+chaine[i];
         }
-        catch (string s)
-        {
-            cerr << s;
-        }
+        
+       
         return string();
     }
 
