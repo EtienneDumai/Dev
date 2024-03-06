@@ -22,10 +22,16 @@ int main()
     {
         std::cerr << e.what() << '\n';
     }
-
-    string Substring(const string chaine, int Deb, int Longueur)
+    return 0;
+}
+  string Substring(const string chaine, int Deb, int Longueur)
     {
-        string chaineCoupe;
+
+        string chaineCoupe="";
+        for (int i = Deb; i <= Deb+Longueur ; i++)
+        {
+            /* code */
+        }
         
         try
         {
@@ -38,8 +44,7 @@ int main()
         {
             cerr << s;
         }
-        return 0;
+        return string();
     }
 
-    return string();
-}
+    
