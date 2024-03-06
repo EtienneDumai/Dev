@@ -8,6 +8,12 @@ private:
     bool m_estActif;
 
 public:
+    // Constructeur par défaut
+    Bouton();
+    //constrcuteur permettant de créer à partir d'un cercle et d'un etat
+    Bouton(const Cercle &, bool  = false);
+    //constructeur de copie
+    Bouton(const Bouton &);
     // procédure pour definir la position, la taille, sa couleur(trois entiers entre 0 et 255) et eventuellement son etat
     void definir(int, int, int , int , int , int , bool  = false);
     // procédure pour definir la position, la taille,eventuellement sa couleur(un objet de calsse Couleur) et eventuellement son etat, par défaut le bouton sera bleu et inactif
