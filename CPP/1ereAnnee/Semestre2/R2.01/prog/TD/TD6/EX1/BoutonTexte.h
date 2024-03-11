@@ -1,3 +1,5 @@
+#ifndef BOUTONTEXTE_H
+#define BOUTONTEXTE_H
 #include "Bouton.h"
 
 class BoutonTexte : public Bouton
@@ -18,3 +20,4 @@ class BoutonTexte : public Bouton
 
 
 };
+#endif
