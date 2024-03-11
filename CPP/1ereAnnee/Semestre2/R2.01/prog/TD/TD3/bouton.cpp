@@ -64,7 +64,6 @@ void Bouton::afficher(Fenetre &f) const
         int y = (*this).coordY()-r/2;
         f.remplitEllispe(x,y,r,r);
     }
-    
 }
 
 void Bouton::effacer(Fenetre &f) const

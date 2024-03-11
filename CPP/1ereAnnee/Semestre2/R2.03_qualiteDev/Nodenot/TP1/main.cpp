@@ -18,27 +18,33 @@ int main()
     {
         Substring(chaineTest, debut, longueur);
     }
-    catch (const std::exception &e)
+    catch (string s)
     {
-        std::cerr << e.what() << '\n';
+        cout<<s<<endl;
     }
     return 0;
 }
-  string Substring(const string chaine, int Deb, int Longueur)
+string Substring(const string chaine, int Deb, int Longueur)
+{
+    string chaineCoupe = "";
+    if (Deb < 0)
     {
-        string chaineCoupe="";
-        if (Deb<0)
-        {
-            throw string("Deb ne peut pas etre negatif");
-        }
-        
-        for (int i = Deb; i <= Deb+Longueur ; i++)
-        {
-            chaineCoupe+= chaineCoupe+chaine[i];
-        }
-        
-       
-        return string();
+        throw string("Deb ne peut pas etre negatif");
+    }
+    if (Longueur < 0)
+    {
+        throw string("Longueur ne peut pas etre negatif");
+    }
+    if (Deb + Longueur > chaine.length())
+    {
+        throw string("Deb + Longueur ne peut pas etre superieur a la taille de la chaine");
     }
 
-    
+
+    for (int i = Deb; i <= Deb + Longueur; i++)
+    {
+        chaineCoupe += chaineCoupe + chaine[i];
+    }
+
+    return chaineCoupe;
+}
