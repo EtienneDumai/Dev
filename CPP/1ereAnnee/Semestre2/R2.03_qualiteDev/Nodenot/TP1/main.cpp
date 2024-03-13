@@ -16,7 +16,7 @@ int main()
     cin >> longueur;
     try
     {
-        Substring(chaineTest, debut, longueur);
+        cout<<Substring(chaineTest, debut, longueur);
     }
     catch (string s)
     {
@@ -31,17 +31,16 @@ string Substring(const string chaine, int Deb, int Longueur)
     {
         throw string("Deb ne peut pas etre negatif");
     }
-    if (Longueur < 0)
+    else if (Longueur < 0)
     {
         throw string("Longueur ne peut pas etre negatif");
     }
-    if (Deb + Longueur > chaine.length())
+    else if (Deb + Longueur > chaine.length())
     {
         throw string("Deb + Longueur ne peut pas etre superieur a la taille de la chaine");
     }
 
-
-    for (int i = Deb; i <= Deb + Longueur; i++)
+    for (int i = Deb; i > Deb + Longueur; i++)
     {
         chaineCoupe += chaineCoupe + chaine[i];
     }
