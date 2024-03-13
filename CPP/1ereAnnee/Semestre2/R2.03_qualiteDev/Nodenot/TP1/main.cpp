@@ -35,12 +35,12 @@ string Substring(const string chaine, int Deb, int Longueur)
     {
         throw string("Longueur ne peut pas etre negatif");
     }
-    else if (Deb + Longueur > chaine.length())
+    else if (Deb + Longueur > chaine.size())
     {
         throw string("Deb + Longueur ne peut pas etre superieur a la taille de la chaine");
     }
 
-    for (int i = Deb; i > Deb + Longueur; i++)
+    for (int i = Deb; i < Deb + Longueur; i++)
     {
         chaineCoupe += chaineCoupe + chaine[i];
     }
