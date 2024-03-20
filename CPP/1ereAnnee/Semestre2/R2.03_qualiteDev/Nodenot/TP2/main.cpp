@@ -40,6 +40,10 @@ int maxSum(int value, int maxint)
     {
         return (value*(value+1)/2);
     }
+    for (int i = 0; i < abs(maxint); i++)
+    {
+        
+    }
     
     
 }
