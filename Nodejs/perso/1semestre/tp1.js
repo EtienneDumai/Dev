@@ -15,11 +15,6 @@ rl.question('Quel est le diviseur ? ',(answer2) => {
     diviseur = parseInt(answer2);
 });
 
+quotient = dividende / diviseur;
+console.log('Le quotient de la division est : ' + quotient);
 
-let rayonRoueCm;
-let distanceKm;
-
-rl.question('Quel est le rayon de la roue ?  ', (answer1) => {
-  rayonRoueCm = parseFloat(answer1);
-  
-});
