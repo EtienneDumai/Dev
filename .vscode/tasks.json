@@ -1,16 +1,17 @@
 {
+    "version": "2.0.0",
     "tasks": [
         {
             "type": "cppbuild",
             "label": "C/C++: g++.exe générer le fichier actif",
             "command": "g++.exe",
             "args": [
-			    "-g",
+                "-g",
                 "-Wall",
                 "-Wextra",
                 "-Wpedantic",
                 "-Wconversion",
-				"-fexceptions",
+                "-fexceptions",
                 "${fileDirname}\\*.cpp",
                 "-o",
                 "${fileDirname}\\${fileBasenameNoExtension}.exe"
@@ -23,10 +24,26 @@
             ],
             "group": {
                 "kind": "build",
-                "isDefault": true
+                "isDefault": false
             },
             "detail": "Tâche générée par le débogueur."
+        },
+        {
+            "type": "shell",
+            "label": "tsc: build",
+            "command": "cmd.exe",
+            "args": [
+                "/c",
+                "tsc -p C:/Dev"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": [
+                "$tsc"
+            ],
+            "detail": "Compile TypeScript files using tsconfig.json"
         }
-    ],
-    "version": "2.0.0"
+    ]
 }
