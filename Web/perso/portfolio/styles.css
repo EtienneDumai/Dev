@@ -53,10 +53,13 @@ section {
 }
 
 section h2 {
-    text-align: center;
     margin-bottom: 1rem;
 }
-
+section h1 {
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 2.5rem;
+}
 /* About Section */
 #about p {
     text-align: center;
@@ -77,7 +80,7 @@ section h2 {
     margin-bottom: 0.5rem;
 }
 
-#projects .project a {
+#projects .project button {
     color: #333;
     text-decoration: none;
     background: #f4f4f4;
@@ -85,7 +88,7 @@ section h2 {
     border-radius: 5px;
 }
 
-#projects .project a:hover {
+#projects .project button:hover {
     background: #ddd;
 }
 
@@ -135,6 +138,10 @@ section h2 {
 
 #contact button:hover {
     background: #555;
+}
+#projetS201 .S201 h2 {
+    text-align: left;
+    margin: 0 auto;
 }
 
 /* Footer */
