@@ -55,11 +55,13 @@ section {
 section h2 {
     margin-bottom: 1rem;
 }
+
 section h1 {
     text-align: center;
     margin-bottom: 1rem;
     font-size: 2.5rem;
 }
+
 /* About Section */
 #about p {
     text-align: center;
@@ -90,6 +92,21 @@ section h1 {
 
 #projects .project button:hover {
     background: #ddd;
+}
+
+#projects .container .project .encadrer p {
+    background-color: #444244;
+    /* Couleur de fond bleu */
+    color: white;
+    /* Couleur du texte blanche */
+    padding: 1px 8px; 
+    /* Espacement interne */
+    border-radius: 20px;
+    /* Bordures arrondies */
+    font-family: Arial, sans-serif;
+    /* Police du texte */
+    display: inline-block;
+    /* Affichage en ligne */
 }
 
 /* Skills Section */
@@ -139,30 +156,37 @@ section h1 {
 #contact button:hover {
     background: #555;
 }
+
 /* S201 Section, Page projet1S201.html */
 #S201 .container h2 {
     text-align: left;
     margin: 0 auto;
 }
+
 #S201 .image {
-    display:  flex;
+    display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
     height: 100%;
 }
+
 #S201 .image img {
-    margin :35px;
-    max-width: 100%; /* Pour s'assurer que l'image ne dépasse pas le conteneur */
+    margin: 35px;
+    max-width: 100%;
+    /* Pour s'assurer que l'image ne dépasse pas le conteneur */
     height: auto;
 }
+
 #S201 .container p {
     text-align: left;
     margin: 0 auto;
 }
+
 #S201 .container .gras {
     font-weight: bold;
 }
+
 #S201 .container .container .imageCoteACote {
     display: flex;
     justify-content: center;
@@ -170,10 +194,12 @@ section h1 {
     width: 100%;
     height: 100%;
 }
+
 #S201 .container .container .imageCoteACote img {
-    margin :10px;
+    margin: 10px;
     max-width: 48%;
 }
+
 /* Footer */
 footer {
     background: #333;
@@ -185,19 +211,25 @@ footer {
 footer p {
     margin: 0;
 }
+
 /* Animation JS */
 /* Ajoutez ces styles à la fin de styles.css */
 
 /* Initial state for scroll elements */
-.container, .image, .imageCoteACote, footer {
+.container,
+.image,
+.imageCoteACote,
+footer {
     opacity: 0;
     transform: translateY(20px);
     transition: opacity 1s ease-out, transform 1s ease-out;
 }
 
 /* Visible state for scroll elements */
-.container.visible, .image.visible, .imageCoteACote.visible, footer.visible {
+.container.visible,
+.image.visible,
+.imageCoteACote.visible,
+footer.visible {
     opacity: 1;
     transform: translateY(0);
 }
-
