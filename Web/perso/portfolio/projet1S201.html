@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8">
     <title>My Portfolio</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
     <header>
         <div class="container">
@@ -20,17 +22,40 @@
         </div>
     </header>
     <section id="S201">
-        <div class = "container">
+        <div class="container">
             <h1>Lecteur de Diaporama</h1>
             <h2>Description :</h2>
-            <p>Le but de ce projet était de créer pas à pas un lecteur de diaporama qui fonctionne avec des images (gif) stockés sur la machine 
-                et avec l'applications reliée à une base de données locale pour avoir les informations des diaporamas. Le projet était par groupe de 3,
-                il était à faire sur Qt Creator en C++, puis implémenter une base de données contenant les informations des diaporamas.
+            <p>Le but de ce projet était de créer pas à pas un lecteur de diaporama qui fonctionne avec des images (gif)
+                stockés sur la machine
+                et avec l'applications reliée à une base de données locale pour avoir les informations des diaporamas.
+                Le projet était par groupe de 3,
+                il était à faire sur Qt Creator en C++, puis implémenter une base de données contenant les informations
+                des diaporamas.
             </p>
+            <div class="image">
+                <img src="images/S201/imagesS201v6.png">
+            </div>
+            <div class = "gras"><p>Le projet a été réalisé en 6 étapes (versions) :</p></div>
             
-        <div class = "image">
-                <img src="images/imagesS201v6.png">
-        </div>    
+            <div class="container"><ul>
+                <li>Version 1 : Mise en classes de la v0 fournie, création de diagramme de classes en UML, documentation des classes créer à partir de la v0.
+                    Aucune interface graphique n'était demandé juste une éxécution en console.
+                </li>
+                <div class = "imageCoteACote">
+                    <img src="images/S201/imagesS201v1Console.png">
+                    <img src="images/S201/DiagrammeDesClassesV1.png">
+                </div>
+                <li>Version 2 : Création de l'interface de l'application, avec tout les boutons fonctionnels </li>
+                <li>Version 3 : Ajout de la fonctionnalité de lecture des images en boucle</li>
+                <li>Version 4 : Ajout de la fonctionnalité de lecture des images en boucle avec un délai entre chaque
+                    image</li>
+                <li>Version 5 : Ajout de la fonctionnalité de lecture des images en boucle avec un délai entre chaque
+                    image et la possibilité de changer le délai</li>
+                <li>Version 6 : Ajout de la fonctionnalité de lecture des images en boucle avec un délai entre chaque
+                    image et la possibilité de changer le délai, et ajout de la base de données</li>
+            </div>
+            
+        </div>
     </section>
     <footer>
         <div class="container">
@@ -38,4 +63,5 @@
         </div>
     </footer>
 </body>
+
 </html>

@@ -155,6 +155,24 @@ section h1 {
     max-width: 100%; /* Pour s'assurer que l'image ne dépasse pas le conteneur */
     height: auto;
 }
+#S201 .container p {
+    text-align: left;
+    margin: 0 auto;
+}
+#S201 .container .gras {
+    font-weight: bold;
+}
+#S201 .container .container .imageCoteACote {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+#S201 .container .container .imageCoteACote img {
+    margin :10px;
+    max-width: 48%;
+}
 /* Footer */
 footer {
     background: #333;
