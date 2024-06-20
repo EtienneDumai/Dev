@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
     // Sélectionne tous les éléments avec les classes 'container', 'image', et 'imageCoteACote'
-    const scrollElements = document.querySelectorAll('.container, .image, .imageCoteACote, footer');
+    const scrollElements = document.querySelectorAll(' .container, .image, .imageCoteACote, footer');
 
     // Fonction pour vérifier si un élément est visible dans le viewport
     const elementInView = (el, percentageScroll = 100) => {
