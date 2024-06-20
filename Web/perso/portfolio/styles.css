@@ -185,3 +185,19 @@ footer {
 footer p {
     margin: 0;
 }
+/* Animation JS */
+/* Ajoutez ces styles à la fin de styles.css */
+
+/* Initial state for scroll elements */
+.container, .image, .imageCoteACote {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+/* Visible state for scroll elements */
+.container.visible, .image.visible, .imageCoteACote.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
