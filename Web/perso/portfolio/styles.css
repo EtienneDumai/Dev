@@ -226,6 +226,38 @@ section h1 {
     height: auto;
 }
 
+/* S203 Section, Page projetS203.html */
+#S203 .container h2 {
+    text-align: left;
+    margin: 0 auto;
+}
+#S203 .container .souligner  {
+    text-align: left;
+    margin: 0 auto;
+    text-decoration: underline;
+}
+#S203 .container .gras {
+    font-weight: bold;
+}
+#S203 .container .container .imageCoteACote {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: auto;
+}
+#S203 .container .container .imageCoteACote img {
+    margin: 10px;
+    max-width: 49%;
+}
+#S203 .image img {
+    margin: 35px;
+    max-width: 100%;
+    /* Pour s'assurer que l'image ne dépasse pas le conteneur */
+    height: auto;
+}
+
+
 /* Footer */
 footer {
     background: #333;
