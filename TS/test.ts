@@ -1,16 +1,18 @@
-// Define a variable of type string
-let message: string = "Hello, TypeScript!";
+import { Component } from '@angular/core';
 
-// Print the message to the console
-console.log(message);
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
+})
+export class AppComponent {
+  title: string = 'Mon Application Angular';
 
-// Define a function that takes two numbers and returns their sum
-function addNumbers(a: number, b: number): number {
-    return a + b;
+  constructor() {
+    this.afficherTitre();
+  }
+
+  afficherTitre(): void {
+    console.log(this.title);
+  }
 }
-
-// Call the function and store the result in a variable
-let sum: number = addNumbers(5, 10);
-
-// Print the sum to the console
-console.log("The sum is: " + sum);
