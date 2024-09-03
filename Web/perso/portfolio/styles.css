@@ -12,8 +12,8 @@ body {
 
 .container {
     width: 80%;
-    margin: auto;
-    overflow: hidden;
+    margin:auto;
+    overflow: visible;
 }
 
 /* Header */
@@ -292,10 +292,11 @@ footer p {
     margin: 0;
 }
 
-/* Animation JS */
+/* Animation JS
 /* Ajoutez ces styles à la fin de styles.css */
 
 /* Initial state for scroll elements */
+
 .container,
 .image,
 .imageCoteACote,
@@ -312,4 +313,4 @@ footer {
 footer.visible {
     opacity: 1;
     transform: translateY(0);
-}
+} 
