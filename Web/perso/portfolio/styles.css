@@ -70,9 +70,12 @@ section h1 {
 #titre li a {
     color: #fff;
     text-decoration: none;
+    border: 1px solid #ddd;
+    border-radius: 150px;
+    padding: 0.05rem 0.5rem;
+    background: #414141;
 }
 #titre li a:hover {
-    text-decoration: underline;
     cursor : pointer;
 }
 #cache{
