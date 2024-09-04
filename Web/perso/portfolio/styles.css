@@ -12,25 +12,15 @@ body {
 
 .container {
     width: 80%;
-    margin-top: 250px;
+    margin: auto;
     overflow: visible;
 }
 
 /* Header */
 header {
-    position :fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height:auto;
-    z-index: 1000;
     background: #333;
     color: #fff;
     padding: 1rem 0;
-}
-
-header h1 {
-    text-align: center;
 }
 
 nav ul {
@@ -85,7 +75,9 @@ section h1 {
     text-decoration: underline;
     cursor : pointer;
 }
-
+#cache{
+    overflow: hidden;
+}
 /* About Section */
 #about p {
     text-align: center;
