@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Sélectionne tous les éléments avec les classes 'container', 'image', et 'imageCoteACote'
-    const scrollElements = document.querySelectorAll(' .container, .image, .imageCoteACote, footer');
+    // Sélectionne tous les éléments avec les classes 'container', 'image', et 'imageCoteACote', excluant le footer
+    const scrollElements = document.querySelectorAll(' .container, .image, .imageCoteACote');
 
     // Fonction pour vérifier si un élément est visible dans le viewport
     const elementInView = (el, percentageScroll = 100) => {
@@ -33,6 +33,10 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     };
+
+    // Le footer est directement visible sans animation
+    const footer = document.querySelector('footer');
+    footer.classList.add('visible');
 
     // Ajoute un écouteur d'événement pour le défilement
     window.addEventListener('scroll', () => {
