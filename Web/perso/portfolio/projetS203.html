@@ -25,11 +25,11 @@
                 Ce projet se divisait en plusieurs parties :</p>
             <ul>
                 <li><a href="#PlanAdressage">Plan d'adressage complet avant déploiement</a></li>
-                <li><a href="#Parametrage">Paramétrage des machines</a></li>
                 <li><a href="#DHCP">Configuration DHCP</a></li>
                 <li><a href="#Routage">Routage</a></li>
                 <li><a href="#FTP">Configuration du serveur FTP</a></li>
                 <li><a href="#Web">Configuration du serveur web</a></li>
+                <li><a href="#Conclusion">Conclusion</a></li>
             </ul>
         </div>
         <div class="container">
@@ -106,21 +106,22 @@
                 <div class="container">
                     <h2>Configuration DHCP</h2>
                     <p>
-                        Pour mettre en place le dhcp il faut configurer la machine qui va faire l’adressage avec 
-                        pour chacunes de ces cartes réseau le routeur du sous réseau de chaque carte ainsi que la plage 
+                        Pour mettre en place le dhcp il faut configurer la machine qui va faire l’adressage avec
+                        pour chacunes de ces cartes réseau le routeur du sous réseau de chaque carte ainsi que la plage
                         des adresses de ce sous réseau.
                     </p>
                     <div class="image">
                         <img src="images/S203/dhcp.png" alt="DHCP">
                     </div>
-                    <p>Ensuite il faut mettre dans le rc.local de la machine qui fait le dhcp le démarrage du dhcp pour 
-                    qu’a chaque démarrage de la machine le dhcp démarre.
+                    <p>Ensuite il faut mettre dans le rc.local de la machine qui fait le dhcp le démarrage du dhcp pour
+                        qu’a chaque démarrage de la machine le dhcp démarre.
                     </p>
                     <div class="image">
                         <img src="images/S203/dhcp2.png" alt="rc.local">
                     </div>
                     <p>
-                        Il faut ensuite démarrer le dhcp sur les machines concernées via une commande qui a été mise dans le rc.local 
+                        Il faut ensuite démarrer le dhcp sur les machines concernées via une commande qui a été mise
+                        dans le rc.local
                         pour qu’elle soit automatiquement en dhcp à chaque démarrage.
                     </p>
                     <div class="image">
@@ -130,12 +131,86 @@
             </section>
 
             <section id="FTP">
-                
+                <div class="container">
+                    <h2>Configuration du FTP</h2>
+                    <p>
+                        Pour le serveur ftp,
+                        il faut créer un nouvel utilisateur du nom de frp sans mot de passe avec la commande adduser ftp
+                        dans le fichier passwd il faut modifier la ligne de votre useur et ajouter anonyme et rajouter
+                        ftp:/bin/false
+                    </p>
+                    <div class="image">
+                        <img src="images/S203/ftp1.png" alt="ftp1">
+                    </div>
+                    <p>
+                        Il faut créer le dossier ftp dans home et modifier les droits pour que les autres y aient accès
+                        et qu’il puissent
+                        modifier le dossier. Après ça il faut démarrer le serveur et pour qu’il démarre dès le lancement
+                        de la machine il
+                        faut inscrire ces lignes dans le rc.local
+                    </p>
+                    <div class="image">
+                        <img src="images/S203/ftp2.png" alt="ftp2">
+                    </div>
+                    <p>
+                        Pour se connecter sur une autre machine il faut utiliser la commande ftp suivi de l’adresse du
+                        serveur après il demande avec quel utilisateur on veut se connecter. Nous choisissons ftp quand
+                        il nous demande le mot de passe on appuis sur “Entrée” et on est connecté au serveur et on peut
+                        faire les action que l'on souhaite.
+                    </p>
+                    <div class="image">
+                        <img src="images/S203/ftp3.png" alt="ftp3">
+                    </div>
+                </div>
+
             </section>
 
             <section id="Web">
-
+                <div class="container">
+                    <h2>Configuration du serveur web</h2>
+                    <p>
+                        Comment simuler l’application serveur d’entreposage avec la commande netcat en mode serveur
+                        étape 1: créer un script qui fait écouter le machine serveur et quand elle reçoit quelque chose
+                        elle renvoi une page html puis elle se déconnecter
+                        On a rajouté un boucle pour que le programme s'exécute tout le temps
+                    </p>
+                    <div class="image">
+                        <img src="images/S203/web1.png" alt="web1">
+                    </div>
+                    <p>
+                        étape 2 pour que le programme s'exécute dès le démarrage de la machine il faut faut le rajouter
+                        dans le rc.local.
+                        On ajoute l'autorisation à la machine d'exécuter le programme en tâche de fond puis on redémarre
+                        la machine pour
+                        qu'elle le prenne en compte.
+                    </p>
+                    <div class="image">
+                        <img src="images/S203/web2.png" alt="web2">
+                    </div>
+                    <p>
+                        étape 3 : pour tester si cela fonctionne on va sur un machine du sous réseau entrepôt
+                        on exécute la commande lynx suivi de l'adresse de du serveur
+                    </p>
+                    <div class="image">
+                        <img src="images/S203/web3.png" alt="web3">
+                    </div>
+                    <div class="image">
+                        <img src="images/S203/web4.png" alt="web4">
+                    </div>
+                </div>
             </section>
+            <section id = "Conclusion">
+                <div class="container">
+                    <h2>Conclusion</h2>
+                    <p>
+                        Ce projet nous a permis de mettre en place un système réseau complet avec plusieurs machines
+                        virtuelles.
+                        Nous avons pu mettre en place des services spécifiques pour certaines machines en faisant des
+                        routes et en paramétrant ces services.
+                        Nous avons pu mettre en place un serveur ftp et un serveur web.
+                        Cela nous a aussi permis de mettre en pratique les notions vu en cours pour confirmer nos compétences et nos acquis.
+                    </p>
+                </div>
         </div>
     </section>
 </body>
