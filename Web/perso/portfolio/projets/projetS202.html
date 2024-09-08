@@ -4,13 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <title>My Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../styles.css">
 </head>
 
 <body>
     <header>
         <div class="container">
-            <h1><a onclick="location.href = 'index.html';">Portfolio</a></h1>
+            <div id="titre">
+                <li><a onclick="location.href = '../index.html';">Portfolio</a></li>
+            </div>
         </div>
     </header>
     <section id="S202">
@@ -25,8 +27,9 @@
             <div class="souligner">
                 <ul>
                     <li><a href="#1erePartie">Import des données</a></li>
-                    <li><a href = "#2emePartie">Implémentation des algorithmes de Dijkstra et de Bellman</a></li>
-                    <li><a href = "#3emePartie">Visualisation des algorithmes sur une carte</a></li>
+                    <li><a href="#2emePartie">Implémentation des algorithmes de Dijkstra et de Bellman</a></li>
+                    <li><a href="#3emePartie">Visualisation des algorithmes sur une carte</a></li>
+                    <li><a href="#Conclusion">Conclusion</a></li>
             </div>
             <br>
             <br>
@@ -44,8 +47,8 @@
 
                 </div>
                 <div class="image">
-                    <img src="images/S202/ImportS202.png">
-                    <img src="images/S202/DonneesImporteeS202.png">
+                    <img src="../images/S202/ImportS202.png">
+                    <img src="../images/S202/DonneesImporteeS202.png">
                 </div>
                 <section id="2emePartie">
                     <div class="gras">
@@ -62,38 +65,38 @@
                             ci-dessous qui seront utiles dans les algorithmes pour simplifier le code.
                         </p>
                         <div class="image">
-                            <img src="images/S202/Prog1S202.png">
-                            <img src="images/S202/Prog2S202.png">
+                            <img src="../images/S202/Prog1S202.png">
+                            <img src="../images/S202/Prog2S202.png">
                         </div>
                         <div class="gras">
                             <h3>Algorithme de Dijkstra : </h3>
                         </div>
                         <br>
                         <div class="image">
-                            <img src="images/S202/DijkstraS202.png">
+                            <img src="../images/S202/DijkstraS202.png">
                         </div>
                         <h4>Exemple d'utilisation de dijkstra :</h4>
                         <div class="image">
-                            <img src="images/S202/ExempleDijkstraS202.png">
+                            <img src="../images/S202/ExempleDijkstraS202.png">
                         </div>
                         <h4>Resultat de l'algorithme de Dijkstra : </h4>
                         <div class="image">
-                            <img src="images/S202/ResultatDijkstraS202.png">
+                            <img src="../images/S202/ResultatDijkstraS202.png">
                         </div>
                         <div class="gras">
                             <h3>Algorithme de Bellman : </h3>
                         </div>
                         <br>
                         <div class="image">
-                            <img src="images/S202/BellmanS202.png">
+                            <img src="../images/S202/BellmanS202.png">
                         </div>
                         <h4>Exemple d'utilisation de Bellman :</h4>
                         <div class="image">
-                            <img src="images/S202/ExempleBellmanS202.png">
+                            <img src="../images/S202/ExempleBellmanS202.png">
                         </div>
                         <h4>Resultat de l'algorithme de Bellman : </h4>
                         <div class="image">
-                            <img src="images/S202/ResultatBellmanS202.png">
+                            <img src="../images/S202/ResultatBellmanS202.png">
                         </div>
                     </div>
                 </section>
@@ -115,30 +118,53 @@
                                 les chemins trouvés par les algorithmes sur la carte.
                             </p>
                             <div class="image">
-                                <img src="images/S202/TraceCheminS202.png">
+                                <img src="../images/S202/TraceCheminS202.png">
                             </div>
                             <p>
                                 Ensuite, j'ai utilisé cette fonction pour tracer les chemins trouvés par les algorithmes
                                 de Dijkstra et de Bellman sur la carte.
                             </p>
                             <div class="image">
-                                <img src="images/S202/ResultatCarteS202.png">
+                                <img src="../images/S202/ResultatCarteS202.png">
                             </div>
                             <h4> Visualisation de l'algorithme de Dijkstra sur la carte :</h4>
                             <div class="image">
                                 <video width="640" height="320" controls>
-                                    <source src="videos/S202/VisualisationDijkstra.mp4" type="video/mp4">
-                                    Votre navigateur ne supporte pas la balise vidéo.
+                                    <source src="../videos/S202/VisualisationDijkstra.mp4" type="video/mp4">
+                                    Votre navigateur ne supporte pas la vidéo.
                                 </video>
                             </div>
                             <br>
                             <h4> Visualisation de l'algorithme de Bellman sur la carte :</h4>
                             <div class="image">
                                 <video width="640" height="320" controls>
-                                    <source src="videos/S202/VisualisationBellman.mp4" type="video/mp4">
-                                    Votre navigateur ne supporte pas la balise vidéo.
+                                    <source src="../videos/S202/VisualisationBellman.mp4" type="video/mp4">
+                                    Votre navigateur ne supporte pas la vidéo.
                                 </video>
                             </div>
+                        </div>
+                    </section>
+                </div>
+                <div class="container">
+                    <section id="Conclusion">
+                        <div class="gras">
+                            <h3>Conclusion : </h3>
+                        </div>
+                        <div class="container">
+                            <p>
+                                Avec ces différentes étapes nous avons pu voir comment fonctionne les gps quand ils nous
+                                donne un chemin. Cela nous a également permis de voir une nouvelle structure de données
+                                les graphes.
+                                Nous avons aussi découvert comment faire de l'interface graphique en python. Grâce à
+                                cela nous avons
+                                aussi révisé les algorithmes que nous avons vu théoriquement en maths pour les mettre en
+                                pratique
+                                dans ce projet.
+                                Cela a renforcé nos compétences en programmation et en algorithmique, mais aussi celle
+                                d'adaptation
+                                à une bibliothèque externe avec pour seul aide la documentation technique qui nous a été
+                                fournie.
+                            </p>
                         </div>
                     </section>
                 </div>
@@ -146,10 +172,9 @@
         </div>
     </section>
     <footer>
-        <div class="container">
-            <p>&copy; 2024 DUMAI Etienne. Tous droits réservés.</p>
-        </div>
+        <p>&copy; 2024 DUMAI Etienne. Tous droits réservés.</p>
     </footer>
 </body>
+
 </html>
-<script src="js/script.js"></script>
+<script src="../js/script.js"></script>
