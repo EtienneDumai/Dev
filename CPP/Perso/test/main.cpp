@@ -1,5 +1,20 @@
 #include <iostream>
 using namespace std;
+/**
+ * @brief 
+ * 
+ * @param a 
+ * @param b 
+ * @return int 
+ */
+int add(int a, int b)
+{
+    return a + b;
+}
+float add(float a, float b)
+{
+    return a + b;
+}
 int main()
 {
     cout << "Hello, World!" << endl;
