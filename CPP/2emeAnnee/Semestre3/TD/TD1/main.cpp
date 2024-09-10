@@ -3,6 +3,6 @@
 using namespace std;
 
 int main (){
-    cout << "L'année actuelle est : " << Outils::anneeActuelle() << endl;
+    cout << "L'annee actuelle est : " << Outils::anneeActuelle() << endl;
     return 0;
 }

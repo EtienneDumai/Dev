@@ -13,4 +13,9 @@ public:
     string getPrenom();
     string getNom();
     int getAnneeNaissance();
+    void setPrenom(string);
+    void setNom(string);
+    void setAnneeNaissance(int);
+    virtual string toString();
+    virtual int getAge();
 };
